@@ -21,7 +21,7 @@ func QueueManager(commands chan models.Command, done chan bool, wg *sync.WaitGro
 				}
 				continue
 			case "OUT":
-				patient := queue.DeQueue()
+				patient := queue.Dequeue()
 				if patient == nil {
 					fmt.Println("No Patients in Queue")
 					continue

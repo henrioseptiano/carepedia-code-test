@@ -46,10 +46,10 @@ func main() {
 				continue
 			}
 			mrNumber, gender := parts[1], parts[2]
-			commands <- models.Command{Type: "IN", Patient: &models.Patient{MRNumber: mrNumber, Gender: gender}}
+			commands <- models.Command{Type: strings.ToUpper(commandType), Patient: &models.Patient{MRNumber: mrNumber, Gender: gender}}
 			continue
 		case "OUT", "ROUNDROBIN", "DEFAULT":
-			commands <- models.Command{Type: commandType}
+			commands <- models.Command{Type: strings.ToUpper(commandType)}
 			continue
 		default:
 			fmt.Println("Unknown Command. Please Use one of [IN, OUT, ROUNDROBIN, DEFAULT, EXIT].")

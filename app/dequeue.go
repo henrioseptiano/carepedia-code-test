@@ -2,7 +2,7 @@ package app
 
 import "github.com/henrioseptiano/carepedia-code-test/models"
 
-func (q *Queue) DeQueue() *models.Patient {
+func (q *Queue) Dequeue() *models.Patient {
 	if len(q.Patients) == 0 {
 		return nil
 	}
