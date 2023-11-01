@@ -6,12 +6,12 @@ Cara memakai aplikasi ini via console,
 
 ### Windows
 ```
-go build -t <nama aplikasi>.exe
+go build -o <nama aplikasi>.exe
 ```
 
 ### Unix/Linux
 ```
-go build -t <nama aplikasi>.sh
+go build -o <nama aplikasi>.sh
 ```
 
 kemudian jalankan aplikasi tersebut yang sudah dibuild
